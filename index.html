@@ -28,7 +28,7 @@
   </p>
   </div>
 </div>
-        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <nav class="navbar sticky-top navbar-expand-lg navbar-light bg-light">
                 <a class="navbar-brand" href="#">ClarkJamesDev</a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                   <span class="navbar-toggler-icon"></span>
@@ -39,10 +39,10 @@
                       <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
                     </li>
                     <li class="nav-item">
-                      <a class="nav-link" href="#">About</a>
+                      <a class="nav-link" href="#about">About</a>
                     </li>
                     <li class="nav-item">
-                      <a class="nav-link" href="#">Portfolio</a>
+                      <a class="nav-link" href="#project-link">Portfolio</a>
                     </li>
                     <li class="nav-item">
                       <a class="nav-link" href="#" tabindex="-1" aria-disabled="true">Contact</a>
@@ -73,21 +73,68 @@
                       </div>
               </div>
 
-            
+            <div id="project-link"></div>
             <div id="project-section">
-              <div class="row"></div>
+              <div class="row">
                 <div class="col-12">
                   <h1 id="project-header">Projects</h1>
                 </div>
-              <div class="row">
-                <div class="col-6">
-                  Project One
-                </div>
-                <div class="col-6">
-                  Image of Project One
-                </div>
               </div>
+              <div class="row">
+                <div class="col-4">
+                 <div class="card" style="width: 18rem;">
+                  <img class="card-img-top" src="fenway-media-one.png" alt="fenway media one screenshot">
+                  <div class="card-body">
+                    <h5 class="card-title">Fenway Media One</h5>
+                    <p class="card-text">Fenway Media One is a marketing consultant agency.</p>
+                    <a href="https://fenway-media-one.herokuapp.com/" class="btn btn-primary">See the site</a>
+                    </div>
+                  </div>
+                </div>
+                
+                <div class="col-4">
+                    <div class="card" style="width: 18rem;">
+                     <img class="card-img-top" src="yelpcamp.png" alt="yelpcamp screenshot">
+                     <div class="card-body">
+                       <h5 class="card-title">YelpCamp</h5>
+                       <p class="card-text">YelpCamp is an online site to review campsites.  Technology used: Node.js, MongoDB, Mongoose, JS</p>
+                       <a href="https://intense-castle-94182.herokuapp.com/" class="btn btn-primary">See the site</a>
+                       </div>
+                     </div>
+                   </div>
+                <div class="col-4">
+                    <div class="card" style="width: 18rem;">
+                     <img class="card-img-top" src="foursteps.png" alt="foursteps screenshot">
+                     <div class="card-body">
+                       <h5 class="card-title">Foursteps</h5>
+                       <p class="card-text">Foursteps provides online financial consulting and has a proprietary budgeting software.  Technology used: HTML, CSS, JS, Python, Flask, Firebase</p>
+                       <a href="https://www.foursteps.io/foursteps/" class="btn btn-primary">See the site</a>
+                       </div>
+                     </div>
+                   </div>
+                <div class="col-4">
+                    <div class="card" style="width: 18rem;">
+                     <img class="card-img-top" src="patatap-clone.png" alt="patatap-clone screenshot">
+                     <div class="card-body">
+                       <h5 class="card-title">Patatap Clone</h5>
+                       <p class="card-text">This Patatap clone was a fun project.  Each keystroke makes a unique sound and color.    Technology used: HTML, CSS, JS, JQuery, Howler.js</p>
+                       <a href="https://github.com/cdrishinski/patatapClone" class="btn btn-primary">See the GitHub repo</a>
+                       </div>
+                     </div>
+                   </div>
+                <div class="col-4">
+                    <div class="card" style="width: 18rem;">
+                     <img class="card-img-top" src="color-game.png" alt="color-game screenshot">
+                     <div class="card-body">
+                       <h5 class="card-title">Guess The Color Game</h5>
+                       <p class="card-text">This Color Game uses JQuery to randomize an RGB color.  Guess the correct color by selecting the right tile.  Technology used: HTML, CSS, JS, JQuery</p>
+                       <a href="https://github.com/cdrishinski/patatapClone" class="btn btn-primary">See the GitHub repo</a>
+                       </div>
+                     </div>
+                   </div>
             </div>
+            
+<!-- container div below this comment -->
           </div>
             
 <style>
@@ -111,10 +158,14 @@
     img {
         width: 100%;
     }
+    #project-link {
+      height: 50px;
+    }
   #project-header {
     text-align: center;
   }
 </style>
+
   <script>
     
   </script>
