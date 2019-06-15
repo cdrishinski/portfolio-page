@@ -13,8 +13,32 @@
   src="https://code.jquery.com/jquery-3.4.1.min.js"
   integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
   crossorigin="anonymous"></script>
-  
+
+  <script src="https://kit.fontawesome.com/16b099a84c.js"></script>
+ 
+  <link rel="apple-touch-icon" sizes="180x180" href="./favicon_io/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="./favicon_io/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="./favicon_io/favicon-16x16.png">
+<link rel="manifest" href="./favicon_io/site.webmanifest">
+
+
     <title>ClarkJamesDev</title>
+
+    <script type="text/javascript" src="https://cdn.emailjs.com/sdk/2.3.2/email.min.js"></script>
+    <script type="text/javascript">
+        (function(){
+           emailjs.init("user_HeE5HZRJPIK8DpjtGli9H");
+        })();
+    </script>
+    <script type="text/javascript">
+        window.onload = function() {
+            document.getElementById('contact-form').addEventListener('submit', function(event) {
+                event.preventDefault();
+                this.contact_number.value = Math.random() * 100000 | 0;
+                emailjs.sendForm('contact_service', 'contact_form', this);
+            });
+        }
+    </script>
 </head>
   
   
@@ -42,7 +66,10 @@
                       <a class="nav-link" href="#about">About</a>
                     </li>
                     <li class="nav-item">
-                      <a class="nav-link" href="#project-link">Portfolio</a>
+                      <a class="nav-link" href="#project-link">Projects</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="#tech-link">Favorite Technologies</a>
                     </li>
                     <li class="nav-item">
                       <a class="nav-link" href="#contact-link" aria-disabled="true">Contact</a>
@@ -133,38 +160,70 @@
                      </div>
                    </div>
             </div>
+            <div id="tech-link"></div>
+            <div id="tech-section">
+              <h2>My Favorite Tech Stack</h2>
+              <div class="row">
+                <div class="col-12">
+                    <i class="fab fa-4x fa-js-square"></i>
+                    <i class="fab fa-4x fa-react"></i>
+                    <i class="fab fa-4x fa-node-js"></i>
+                    <i class="fab fa-4x fa-html5"></i>
+                    <i class="fab fa-4x fa-css3"></i>
+                    <i class="fab fa-4x fa-envira"></i>
+                  </div>
+              </div>
+            </div>
+            </div>
+            <!-- container div below this comment -->
+          </div>
 
             <div id="contact-link"></div>
-            <div class="align-self-center" id="contact-section">
-              <div>
-                  <h2>Have a question or want to work together?</h2>
-          
-                  <h2>Lets get in touch!</h2>
-              </div>
-                    <form>
-                      <div class="row">
-                          <div class="form-group col-6">
-                              <label for="name">Name</label>
-                              <input type="text" class="form-control" id="name" aria-describedby="names" placeholder="Name">
-                            </div>
-                            <div class="form-group col-6">
-                              <label for="email">Email</label>
-                              <input type="email" class="form-control" id="email" placeholder="Email">
-                            </div>
-                      </div>
-                        
-                        <div class="form-group">
-                            <label for="message">Message</label>
-                            <textarea class="form-control" id="message" rows="3"></textarea>
+            <div class="align-self-center bg-dark" id="contact-section">
+              <div class="container text-light">
+                  <h2>Contact</h2>
+                  <div>
+                      <h2>Have a question or want to work together?</h2>
+              
+                      <h2>Lets get in touch!</h2>
+                  </div>
+                  <!-- <form id="contact-form">
+                      <input type="hidden" name="contact_number">
+                      <label>Name</label>
+                      <input type="text" name="user_name">
+                      <label>Email</label>
+                      <input type="email" name="user_email">
+                      <label>Message</label>
+                      <textarea name="contact"></textarea>
+                      <input type="submit" value="Send">
+                  </form> -->
+                        <form id="contact-form">
+                          <input type="hidden" name="contact_number">
+                          <div class="row">
+                              <div class="form-group col-6 mg-1">
+                                  <label for="user_name">Name</label>
+                                  <input type="text" name="user_name" class="form-control" id="name" aria-describedby="names" placeholder="Name">
+                                </div>
+                                <div class="form-group col-6">
+                                  <label for="user_email">Email</label>
+                                  <input type="email" name="user_email" class="form-control" id="email" placeholder="Email">
+                                </div>
                           </div>
-                        <button type="submit" class="btn btn-primary">Submit</button>
-                      </form>
+                            
+                            <div class="form-group">
+                                <label for="contact">Message</label>
+                                <textarea class="form-control" name="contact" id="message" rows="3"></textarea>
+                              </div>
+                            <input type="submit" value="Send" class="btn btn-primary"></input>
+                          </form>
+              </div>
+              
+            
                     
               </div>
               
-            </div>
-<!-- container div below this comment -->
-          </div>
+         
+
             
 <style>
   .jumbotron {
@@ -187,13 +246,17 @@
     img {
         width: 100%;
     }
-    #project-link, #contact-link {
+    #project-link, #tech-link, #contact-link {
       height: 50px;
     }
   #project-header {
     text-align: center;
   }
-  #contact-section{
+  .fab {
+    height: 70px;
+    width: 70px;
+  }
+  #contact-section, #tech-section{
     text-align: center;
   }
 </style>
